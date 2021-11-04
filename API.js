@@ -1,21 +1,15 @@
-fetch('https://api.astrocats.space/SN2014J/redshift?item=0')
+fetch('https://api.astrocats.space/SN2014J/redshift')
   .then(response => response.json())
   .then(data => console.log(data));
 
+  fetch('https://api.astrocats.space/catalog?ra=21:23:32.16&dec=-53:01:36.08&radius=2')
+  .then(response => response.json())
+  .then(data => console.log(data));
 
+  fetch('https://api.sne.space/catalog?format=CSV')
+  .then(response => response.json())
+  .then(data => console.log(data));
 
-
-fetch('https://api.astrocats.space/SN2014J+SN2015F/photometry/time+magnitude+band?format=csv', {
-  method: 'FETCH',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(Object),
-})
-.then(response => response.json())
-.then(data => {
-  console.log('Success:', data);
-})
-.catch((error) => {
-  console.error('Error:', error);
-});
+  fetch('https://api.astrocats.space/SN2014J/redshift?first')
+  .then(response => response.json())
+  .then(data => console.log(data));
