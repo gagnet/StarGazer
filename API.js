@@ -1,3 +1,21 @@
-var aladin = A.aladin('#aladin-lite-div', {survey: 'P/DSS2/red', target: 'M1', fov: 0.3});
-var cat = A.catalogFromURL('https://cdsxmatch.u-strasbg.fr/QueryCat/QueryCat?catName=SIMBAD&mode=cone&pos=M1&r=50arcmin&format=votable&limit=3000', {sourceSize:12, color: '#cc99bb', displayLabel: true, labelColumn: 'main_id', labelColor: '#ae4', labelFont: '9px sans-serif'});
-aladin.addCatalog(cat);
+fetch('https://api.astrocats.space/SN2014J/redshift?item=0')
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+
+
+
+fetch('https://api.astrocats.space/SN2014J+SN2015F/photometry/time+magnitude+band?format=csv', {
+  method: 'FETCH',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(Object),
+})
+.then(response => response.json())
+.then(data => {
+  console.log('Success:', data);
+})
+.catch((error) => {
+  console.error('Error:', error);
+});
