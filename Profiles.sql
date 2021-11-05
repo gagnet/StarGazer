@@ -1,6 +1,7 @@
 CREATE TABLE Profiles (
+    ID SERIAL PRIMARY KEY
     username VARCHAR(100) NULL,
-    e-mail VARCHAR(100) NULL,
-    year born INTEGER NULL,
+    email VARCHAR(100) NULL,
+    year INTEGER NULL,
     
 );
