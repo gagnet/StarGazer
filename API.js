@@ -1,3 +1,18 @@
-var aladin = A.aladin('#aladin-lite-div', {survey: 'P/DSS2/red', target: 'M1', fov: 0.3});
-var cat = A.catalogFromURL('https://cdsxmatch.u-strasbg.fr/QueryCat/QueryCat?catName=SIMBAD&mode=cone&pos=M1&r=50arcmin&format=votable&limit=3000', {sourceSize:12, color: '#cc99bb', displayLabel: true, labelColumn: 'main_id', labelColor: '#ae4', labelFont: '9px sans-serif'});
-aladin.addCatalog(cat);
+fetch('https://api.astrocats.space/SN2014J/redshift')
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+  fetch('https://api.astrocats.space/catalog?ra=21:23:32.16&dec=-53:01:36.08&radius=2')
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+  fetch('https://api.astrocats.space/catalog/lumdist+claimedtype?lumdist&claimedtype=ia&format=tsv')
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+  fetch('https://api.astrocats.space/SN2014J/redshift?first')
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+  // heroku database 1 password dont use for us, solo account password 
+  // 
