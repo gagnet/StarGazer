@@ -20,3 +20,19 @@ app.get("/", (req, res) => {
 app.get("/newuser", (req, res) => {
   res.sendFile(path.join(__dirname, "/public/newuser.html"));
 });
+app.get("/bootstrap", (req, res) => {
+  res.sendFile(path.join(__dirname, "/public/bootstrap.html"));
+});
+
+// const handleRequest = (req, res) => {
+//   //   console.log(req.url);
+//   if (req.url === "/newuser") {
+//     displaynewuser(res);
+//   } else if (req.url === "/bootstrap") {
+//     displayBootstrap(res);
+//   } else if (req.url === "/") {
+//     displayIndex(res);
+//   }
+// };
+
+// const server = http.createServer(handleRequest);
